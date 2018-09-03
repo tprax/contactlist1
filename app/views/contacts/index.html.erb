@@ -1,0 +1,9 @@
+<h1>Contact List</h1>
+<% @contacts.each do |contact| %>
+  <%= contact.first_name %>
+  <%= contact.last_name %>
+  <%= link_to 'Show', contact_path(contact.id) %>
+  <%= link_to 'Edit', edit_contact_path(contact.id) %>
+  <%= link_to 'Delete', contact_path(contact.id), method: :delete %>
+  <% end %>
+
